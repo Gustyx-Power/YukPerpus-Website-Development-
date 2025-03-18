@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login YukPerpus!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Selamat Datang di YukPerpus!</h1>
+    <button onclick="openModal('userModal')">Login User</button>
+    <button onclick="openModal('adminModal')">Login Admin</button>
+
+    <!-- Popup Login User -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('userModal')">&times;</span>
+            <h2>Login User</h2>
+            <input type="text" id="userUsername" placeholder="Masukkan Username">
+            <input type="password" id="userPassword" placeholder="Masukkan Password">
+            <button onclick="loginUser()">Masuk</button>
+            <button onclick="showRegister()">Daftar</button>
+        </div>
+    </div>
+
+    <!-- Popup Pendaftaran User -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Daftar User</h2>
+            <input type="text" id="registerUsername" placeholder="Masukkan Username">
+            <input type="password" id="registerPassword" placeholder="Masukkan Password">
+            <input type="text" id="registerTelegram" placeholder="Masukkan ID Telegram">
+            <button onclick="registerUser()">Daftar</button>
+        </div>
+    </div>
+
+    <!-- Popup Login Admin -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('adminModal')">&times;</span>
+            <h2>Login Admin</h2>
+            <input type="text" id="adminUsername" placeholder="Username Admin">
+            <input type="password" id="adminPassword" placeholder="Password">
+            <button onclick="loginAdmin()">Login</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
